@@ -23,7 +23,7 @@ class WebViewActivity : AppCompatActivity() {
         FreshWorksApplication[this].getAppComponent().inject(this)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.errorView.tryAgain.setOnClickListener {
+        binding.errorView.errorTryAgain.setOnClickListener {
             webViewSetup()
         }
         webViewSetup()
