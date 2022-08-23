@@ -17,11 +17,11 @@ class AppLockActivity : AppCompatActivity(), BiometricAuthListener {
         fun start(
             context: Context,
         ) {
-            val starter: Intent =
+            val intent: Intent =
                 Intent(context, AppLockActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            context.startActivity(starter)
+            context.startActivity(intent)
         }
     }
 
