@@ -14,7 +14,7 @@ import com.main.biometric.databinding.ActivityWebViewBinding
 
 const val webUrl: String = "https://www.freshworks.com/"
 
-class MainActivity : AppCompatActivity() {
+class WebViewActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWebViewBinding
 

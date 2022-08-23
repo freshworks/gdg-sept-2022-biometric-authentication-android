@@ -2,7 +2,7 @@ package com.main.biometric
 
 import android.app.Application
 import com.main.biometric.activities.AppLockActivity
-import com.main.biometric.activities.MainActivity
+import com.main.biometric.activities.WebViewActivity
 import com.main.biometric.module.AppModule
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -25,5 +25,5 @@ interface AppComponent {
 
     fun inject(activity: AppLockActivity)
 
-    fun inject(activity: MainActivity)
+    fun inject(activity: WebViewActivity)
 }
