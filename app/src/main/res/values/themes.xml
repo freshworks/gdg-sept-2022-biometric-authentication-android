@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FreshWorks" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blueShade1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blueShade2</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+    <style name="Theme.FreshWorks.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

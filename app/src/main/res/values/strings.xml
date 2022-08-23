@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Freshworks</string>
+    <string name="unlock_fresh_works">Unlock Freshworks</string>
+    <string name="cancel">Cancel</string>
+    <string name="try_again">Try Again</string>
+    <string name="confirm_your_screen_lock">Confirm your screen lock pattern, PIN, password, face or fingerprint</string>
+    <string name="authentication_failed">Authentication failed. Try again to continue using Freshworks</string>
+    <string name="fresh_works_locked">Freshworks Locked</string>
+    <string name="please_try_again">Something went wrong</string>
+</resources>
