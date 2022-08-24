@@ -9,7 +9,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.main.biometric.FreshWorksApplication
+import com.main.biometric.FreshworksApplication
 import com.main.biometric.databinding.ActivityWebViewBinding
 
 const val webUrl: String = "https://www.freshworks.com/"
@@ -20,7 +20,7 @@ class WebViewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        FreshWorksApplication[this].getAppComponent().inject(this)
+        FreshworksApplication[this].getAppComponent().inject(this)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.errorView.errorTryAgain.setOnClickListener {

@@ -8,7 +8,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.view.isVisible
 import com.main.biometric.interfaces.BiometricAuthListener
 import com.main.biometric.BiometricUtils
-import com.main.biometric.FreshWorksApplication
+import com.main.biometric.FreshworksApplication
 import com.main.biometric.databinding.ActivityAppLockBinding
 
 class AppLockActivity : AppCompatActivity(), BiometricAuthListener {
@@ -29,7 +29,7 @@ class AppLockActivity : AppCompatActivity(), BiometricAuthListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        FreshWorksApplication[this].getAppComponent().inject(this)
+        FreshworksApplication[this].getAppComponent().inject(this)
         binding = ActivityAppLockBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.apply {

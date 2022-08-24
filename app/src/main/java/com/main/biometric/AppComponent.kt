@@ -21,7 +21,7 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(app: FreshWorksApplication)
+    fun inject(app: FreshworksApplication)
 
     fun inject(activity: AppLockActivity)
 
