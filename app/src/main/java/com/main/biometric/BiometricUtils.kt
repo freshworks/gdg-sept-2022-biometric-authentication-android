@@ -2,6 +2,8 @@ package com.main.biometric
 
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
+import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.main.biometric.interfaces.BiometricAuthListener
@@ -35,23 +37,15 @@ class BiometricUtils {
     fun showBiometricPrompt(
         @StringRes
         title: Int = R.string.unlock_fresh_works,
-        showSubtitle: Boolean = true,
         activity: AppCompatActivity,
         listener: BiometricAuthListener,
-        allowDeviceCredential: Boolean = true
     ) {
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
             .apply {
                 setTitle(activity.getString(title))
+                setSubtitle((activity.getString(R.string.confirm_your_screen_lock)))
                 setConfirmationRequired(false)
-                if (allowDeviceCredential) {
-                    setDeviceCredentialAllowed(allowDeviceCredential)
-                } else {
-                    setNegativeButtonText(activity.getString(R.string.cancel))
-                }
-                if (showSubtitle) {
-                    setSubtitle((activity.getString(R.string.confirm_your_screen_lock)))
-                }
+                setAllowedAuthenticators(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
             }.build()
         val biometricPrompt: BiometricPrompt = initBiometricPrompt(activity, listener)
         biometricPrompt.authenticate(promptInfo)
